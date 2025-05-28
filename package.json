@@ -1,0 +1,16 @@
+{
+  "name": "healthx-website",
+  "version": "1.0.0",
+  "description": "HealthX Blockchain Healthcare Platform",
+  "scripts": {
+    "install-frontend": "cd frontend && yarn install",
+    "install-backend": "cd backend && pip install -r requirements.txt",
+    "build-frontend": "cd frontend && yarn build",
+    "start-backend": "cd backend && python server.py",
+    "start-frontend": "cd frontend && yarn start",
+    "deploy": "./deploy.sh"
+  },
+  "keywords": ["healthx", "blockchain", "healthcare", "crypto", "presale"],
+  "author": "HealthX Team",
+  "license": "MIT"
+}
