@@ -255,18 +255,34 @@ async def get_admin_dashboard():
     recent_purchases_cursor = db.purchases.find({}).sort("created_at", -1).limit(20)
     recent_purchases = await recent_purchases_cursor.to_list(20)
     
-    # Add user email to purchases
+    # Add user email to purchases and convert ObjectId to string
+    processed_purchases = []
     for purchase in recent_purchases:
+        # Convert MongoDB ObjectId to string if present
+        if "_id" in purchase:
+            purchase["_id"] = str(purchase["_id"])
+        
         user = await db.users.find_one({"id": purchase["user_id"]})
+        if user and "_id" in user:
+            user["_id"] = str(user["_id"])
+            
         purchase["user_email"] = user["email"] if user else "Unknown"
+        processed_purchases.append(purchase)
+    
+    # Process user objects to ensure they're serializable
+    processed_users = []
+    for user in recent_users:
+        if "_id" in user:
+            user["_id"] = str(user["_id"])
+        processed_users.append(user)
     
     return {
         "totalUsers": total_users,
         "totalPurchases": total_purchases,
         "totalFunds": total_funds,
         "totalTokens": total_tokens,
-        "recentUsers": [User(**user) for user in recent_users],
-        "recentPurchases": recent_purchases
+        "recentUsers": [User(**user) for user in processed_users],
+        "recentPurchases": processed_purchases
     }
 
 # General endpoints
