@@ -107,51 +107,66 @@ user_problem_statement: "Create a website for HealthX with presale functionality
 backend:
   - task: "User Authentication System"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented JWT-based authentication with registration, login, and profile endpoints. Added password hashing with bcrypt and email validation."
+      - working: true
+        agent: "testing"
+        comment: "Successfully tested all authentication endpoints. Registration works with email validation, login generates valid JWT tokens, and protected endpoints correctly validate authentication. All tests passed."
 
   - task: "Presale API Endpoints"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Created purchase recording endpoint and user purchase history endpoint with token calculations."
+      - working: true
+        agent: "testing"
+        comment: "Successfully tested presale purchase and history endpoints. Purchase recording works correctly with different crypto types, and purchase history retrieval returns correct data with statistics. Authentication protection is working as expected."
 
   - task: "Admin Dashboard API"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented admin dashboard endpoint with platform statistics, user management, and purchase analytics."
+      - working: false
+        agent: "testing"
+        comment: "Found issue with Admin Dashboard API: MongoDB ObjectId serialization error causing 500 Internal Server Error. Fixed by converting ObjectId to string in the response."
+      - working: true
+        agent: "testing"
+        comment: "After fixing the ObjectId serialization issue, the Admin Dashboard API is now working correctly. It returns platform statistics, user data, and purchase information as expected."
 
   - task: "Database Models and MongoDB Integration"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Created User and Purchase models with UUID-based IDs, integrated with MongoDB using Motor async driver."
+      - working: true
+        agent: "testing"
+        comment: "Successfully tested MongoDB integration. User and Purchase models are correctly stored and retrieved with UUID-based IDs. Data persistence is working as expected across all endpoints."
 
 frontend:
   - task: "Main Landing Page"
