@@ -179,7 +179,7 @@ frontend:
     status_history:
       - working: "NA"
         agent: "main"
-        comment: "Created sleek black glossy design with HealthX content, blockchain features section, and responsive navigation."
+        comment: "Enhanced landing page with detailed HealthX information including $2.8M funding, industry partnerships, HealthX Card details with global utility, and real-world healthcare integration features."
 
   - task: "User Registration and Login"
     implemented: true
