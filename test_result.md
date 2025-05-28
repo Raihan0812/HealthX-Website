@@ -251,10 +251,7 @@ metadata:
   run_ui: false
 
 test_plan:
-  current_focus:
-    - "Main Landing Page"
-    - "User Registration and Login"
-    - "Presale Page with Wallet Connect"
+  current_focus: []
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
