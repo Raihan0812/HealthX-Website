@@ -200,8 +200,90 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* About HealthX Section */}
+      <section className="py-20 bg-gray-900/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              About HealthX: Revolutionizing Global Healthcare
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              HealthX is at the forefront of healthcare innovation, combining cutting-edge blockchain technology with practical healthcare solutions. With $2.8M in funding from industry-leading backers and partnerships with healthcare giants, we're building the future of medical services.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div className="bg-black/60 backdrop-blur-sm border border-blue-500/20 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-blue-400 mb-6">🏥 Industry Partnerships</h3>
+              <p className="text-gray-300 mb-4">
+                HealthX has forged strategic collaborations with healthcare industry giants to bring blockchain solutions to traditional medical infrastructure. Our partnerships span across:
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Major hospital networks for EHR integration</li>
+                <li>• Pharmaceutical companies for supply chain transparency</li>
+                <li>• Insurance providers for automated claim processing</li>
+                <li>• Medical research institutions for data sharing</li>
+                <li>• Telehealth platforms for secure consultations</li>
+              </ul>
+            </div>
+
+            <div className="bg-black/60 backdrop-blur-sm border border-green-500/20 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-green-400 mb-6">💰 $2.8M Funding Raised</h3>
+              <p className="text-gray-300 mb-4">
+                Backed by leading venture capital firms and healthcare industry investors, HealthX has successfully raised $2.8 million in funding to accelerate our mission of revolutionizing healthcare through blockchain technology.
+              </p>
+              <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 mt-4">
+                <p className="text-green-300 font-semibold">
+                  This funding enables us to expand our development team, forge new partnerships, and bring innovative healthcare solutions to market faster than ever before.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* HealthX Card Section */}
+          <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-xl border border-purple-500/20 p-8 mb-16">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
+                💳 Introducing the HealthX Card
+              </h3>
+              <p className="text-xl text-gray-300">
+                The world's first blockchain-powered healthcare payment card
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-xl font-bold text-white mb-4">🌍 Global Healthcare Utility</h4>
+                <p className="text-gray-300 mb-4">
+                  The HealthX Card leverages HX tokens to provide seamless healthcare payments worldwide. Whether you're purchasing medications, paying for consultations, or covering medical procedures, the HealthX Card offers:
+                </p>
+                <ul className="text-gray-300 space-y-2">
+                  <li>• Instant global healthcare payments</li>
+                  <li>• Reduced transaction fees</li>
+                  <li>• Automatic insurance integration</li>
+                  <li>• Secure medical data linkage</li>
+                  <li>• Rewards in HX tokens for healthy behaviors</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-bold text-white mb-4">🔗 Real-World Integration</h4>
+                <p className="text-gray-300 mb-4">
+                  Built on blockchain technology, the HealthX Card connects to our global network of healthcare providers, ensuring your medical transactions are secure, transparent, and instantly verified.
+                </p>
+                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
+                  <p className="text-blue-300 font-semibold">
+                    Coming Soon: Pre-order your HealthX Card during the presale and be among the first to experience the future of healthcare payments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section id="features" className="py-20 bg-gray-900/50">
+      <section id="features" className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -240,8 +322,8 @@ const HomePage = () => {
                 image: "https://images.unsplash.com/photo-1576086085526-0de1930a57c7"
               },
               {
-                title: "Decentralized Healthcare",
-                description: "Create a patient-centric, secure, and efficient healthcare system powered by blockchain technology.",
+                title: "Global Payment Network",
+                description: "HealthX Card enables worldwide healthcare payments using HX tokens, creating a unified global healthcare economy.",
                 image: "https://images.pexels.com/photos/14911400/pexels-photo-14911400.jpeg"
               }
             ].map((feature, index) => (
