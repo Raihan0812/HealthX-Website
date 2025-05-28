@@ -237,8 +237,6 @@ metadata:
 
 test_plan:
   current_focus:
-    - "User Authentication System"
-    - "Presale API Endpoints"
     - "Main Landing Page"
     - "User Registration and Login"
     - "Presale Page with Wallet Connect"
@@ -249,3 +247,5 @@ test_plan:
 agent_communication:
   - agent: "main"
     message: "Completed initial implementation of full-stack HealthX website with authentication, presale functionality, and admin panel. All core features implemented. Ready for backend testing - please test authentication endpoints, presale API, and admin dashboard functionality."
+  - agent: "testing"
+    message: "Completed comprehensive testing of all backend API endpoints. All authentication endpoints are working correctly. Presale API endpoints for purchase recording and history retrieval are functioning as expected. Fixed an issue with the Admin Dashboard API where MongoDB ObjectId was not being properly serialized to JSON. After the fix, all backend endpoints are now working correctly with a 100% success rate in testing."
